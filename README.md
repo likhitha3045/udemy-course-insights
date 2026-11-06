@@ -1,82 +1,90 @@
-# Udemy-Courses-Stas-2023-Prices-Data_analysis
-
-
-# visit the link to contribute to the analytics and edit it in kaggle : https://www.kaggle.com/code/krishna0000007/udemy-2
 # Udemy Course Data Analysis
-Welcome to the Udemy Course Data Analysis repository! This project revolves around exploring and visualizing data from Udemy courses, analyzing their prices, ratings, and other attributes. By leveraging the power of Python and data visualization libraries, this project sheds light on valuable insights within the Udemy course dataset.
 
-# Udemy Courses
+An exploratory data analysis and baseline regression project using Udemy course metadata. The notebook examines course pricing, ratings, course length, and student engagement, then evaluates a linear regression model for course price.
 
-# Table of Contents
+## Interactive dashboard
 
-Project Overview
-Dataset Description
-Data Analysis
-Exploratory Visualizations
-Usage
-Contributing
-Contact
-License
-Project Overview
-This project focuses on exploring and analyzing the Udemy course dataset, aiming to uncover trends, patterns, and insights related to course prices, ratings, and more. By utilizing Python for data analysis and visualization, the project provides a comprehensive understanding of the dataset's characteristics.
+The Streamlit app adds catalog filters, interactive price and engagement charts, a searchable course explorer, data-quality summaries, and an optional linear regression price estimate compared with a median-price baseline.
 
-# RESULTS  of the EXPLORATORY DATA ANALYSIS AND LINEAR REGRESSION MODELS USED :
+Run the app from the project directory:
 
-1.![image](https://github.com/krishna0306/Udemy-Courses-Stas-2023-Prices-Data_analysis/assets/94451390/43c03559-289b-40dd-90cc-db893afa993b)
+```bash
+streamlit run app.py
+```
 
+The dashboard works immediately with clearly labeled synthetic demo data. For actual analysis, upload `Course_info.csv` in the sidebar, or put it at `data/Course_info.csv` before starting the app.
 
-2.![image](https://github.com/krishna0306/Udemy-Courses-Stas-2023-Prices-Data_analysis/assets/94451390/f325a6fb-9acf-4ffb-9b1e-81dde4dbbf4c)
+## Project highlights
 
-3.![image](https://github.com/krishna0306/Udemy-Courses-Stas-2023-Prices-Data_analysis/assets/94451390/49d64d73-7c7e-4b92-8b86-62ae118d516c)
+- Audits missing values, duplicates, data types, and summary statistics.
+- Visualizes course prices, ratings, and category-level subscriber counts.
+- Compares a linear regression model with a simple median-price baseline.
+- Reports MAE, RMSE, and R-squared on a held-out test set.
+- Provides an interactive Streamlit dashboard for exploring and filtering the catalog.
+- Includes a small synthetic sample so the dashboard can be previewed without downloading the source dataset.
+- Keeps the source dataset out of the repository; provide it locally to run the notebook.
 
-4.![image](https://github.com/krishna0306/Udemy-Courses-Stas-2023-Prices-Data_analysis/assets/94451390/c829ad99-9dc4-4180-8d65-054fd66ffc6c)
+## Repository contents
 
-5.![image](https://github.com/krishna0306/Udemy-Courses-Stas-2023-Prices-Data_analysis/assets/94451390/3839aa03-f504-45c6-bf8d-0471e6b216ca)
+| File | Description |
+| --- | --- |
+| [`app.py`](./app.py) | Interactive Streamlit dashboard |
+| [`data_validation.py`](./data_validation.py) | CSV parsing and validation shared by the app and checks |
+| [`DATA_DICTIONARY.md`](./DATA_DICTIONARY.md) | Required fields, meanings, and data handling rules |
+| [`DEPLOYMENT.md`](./DEPLOYMENT.md) | Create a GitHub repository and deploy the dashboard |
+| [`data/sample_courses.csv`](./data/sample_courses.csv) | Synthetic demo data for previewing the dashboard |
+| [`udemy-2.ipynb`](./udemy-2.ipynb) | Data preparation, exploratory analysis, visualizations, and regression |
+| [`requirements.txt`](./requirements.txt) | Python dependencies |
+| [`tests/test_data_validation.py`](./tests/test_data_validation.py) | Standard-library checks for CSV validation behavior |
+| [`LICENSE`](./LICENSE) | MIT license for the project code |
 
-6.![image](https://github.com/krishna0306/Udemy-Courses-Stas-2023-Prices-Data_analysis/assets/94451390/84629cdc-cb86-434d-a803-d35c051e12d9)
+## Dataset
 
+The original dataset is not included in this repository. The dashboard starts with clearly labeled synthetic demo data; the notebook expects a real `Course_info.csv`. The original [Kaggle notebook](https://www.kaggle.com/code/krishna0000007/udemy-2) is the project's dataset reference; check its current access and usage terms before downloading or redistributing data.
 
-# Dataset Description
-The dataset contains information about various Udemy courses, including details such as course title, price, number of subscribers, average rating, number of reviews, and more. The columns in the dataset include:
+Create the data folder and place the CSV at:
 
-**id
-title
-is_paid
-price
-headline
-num_subscribers
-avg_rating
-num_reviews
-num_comments
-num_lectures
-content_length_min
-published_time
-last_update_date
-category
-subcategory
-topic
-language
-course_url
-instructor_name
-instructor_url
-num_comments**
-# Data Analysis
-In this project, the dataset is analyzed to gain insights into various aspects of Udemy courses. This includes examining the distribution of prices, correlations between attributes, top categories, and more.
+```text
+data/Course_info.csv
+```
 
-# Exploratory Visualizations
-The analysis is accompanied by visualizations that help convey the findings effectively. Exploratory graphs are used to illustrate trends, comparisons, and patterns within the dataset.
+The analysis uses course price, paid status, category, subcategory, language, number of lectures, course length, ratings, reviews, and subscriber counts. The notebook checks for the columns it needs and reports any missing fields.
 
-# Price Distribution
+## Run locally
 
-# Usage
-Clone this repository to your local machine.
-Install the required Python libraries listed in requirements.txt.
-Run the Jupyter Notebook Udemy_Course_Analysis.ipynb to explore the data and visualize the insights.
-Contributing
-Contributions are welcome! If you have suggestions, improvements, or additional analyses, feel free to open an issue or a pull request.
+Requires Python 3.10 or newer.
 
-# Contact
-For questions, suggestions, or collaborations, feedbacks pls   feel free to contact at this mail - radheloyla@gmail.com
+1. Clone the repository and move into the project directory.
+2. (Recommended) Create and activate a virtual environment.
+3. Install dependencies:
 
-# contacts :
-# mail id - radheloyla@gmail.com
+   ```bash
+   python -m pip install -r requirements.txt
+   ```
+
+4. Add the dataset at `data/Course_info.csv`.
+5. Launch Jupyter and open the notebook:
+
+   ```bash
+   jupyter notebook
+   ```
+
+6. Run all cells in `udemy-2.ipynb` from top to bottom.
+
+## Modeling notes
+
+The notebook uses course metadata (paid status, category, subcategory, language, lecture count, and course length) to predict price. Categorical and numeric features are preprocessed in a scikit-learn pipeline, and a fixed random seed makes the train/test split reproducible. Ratings, reviews, and subscriber counts are analyzed but excluded from the price model.
+
+The model is a baseline for practice, not a pricing recommendation. Its performance depends on the dataset snapshot and should be interpreted alongside the held-out baseline metrics.
+
+## CSV validation checks
+
+The dashboard rejects empty files, missing required fields, and duplicate column names. It drops duplicate course rows and rows with invalid prices, converts other invalid numeric values to missing, and labels missing categories `Unknown`. See the [data dictionary](./DATA_DICTIONARY.md) for field details.
+
+Run the built-in checks from the project directory with:
+
+```bash
+python -m unittest discover -s tests
+```
+
+The MIT license applies to the project code; dataset usage terms are set by the dataset's original source.

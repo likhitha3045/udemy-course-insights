@@ -1,0 +1,41 @@
+id,title,is_paid,price,num_subscribers,avg_rating,num_reviews,num_lectures,content_length_min,category,subcategory,language
+1001,Python Foundations,True,49,8420,4.7,1260,42,510,Development,Programming,English
+1002,Web Development Basics,True,89,7350,4.6,980,58,760,Development,Web Development,English
+1003,Data Analysis with Spreadsheets,True,59,9210,4.5,1450,36,430,Business,Data Analysis,English
+1004,Intro to Graphic Design,True,39,5630,4.4,710,31,390,Design,Graphic Design,English
+1005,Digital Marketing Essentials,True,69,10120,4.6,1720,48,620,Marketing,Digital Marketing,English
+1006,SQL for Analysts,True,79,6870,4.7,910,44,540,Development,Data Science,English
+1007,Productivity with Python,False,0,12450,4.5,2080,27,315,Development,Programming,English
+1008,Brand Identity Workshop,True,99,3840,4.3,440,64,880,Design,Graphic Design,Spanish
+1009,Social Media Strategy,True,49,7950,4.4,1030,39,470,Marketing,Social Media,English
+1010,Project Management Starter,True,59,11220,4.6,1860,51,690,Business,Management,English
+1011,JavaScript from Scratch,True,89,14560,4.7,2310,72,940,Development,Web Development,English
+1012,Presentation Design Basics,False,0,6890,4.2,620,22,260,Design,Graphic Design,English
+1013,Customer Research Methods,True,79,5180,4.5,580,46,610,Business,Management,Spanish
+1014,Search Marketing Fundamentals,True,69,9340,4.5,1210,43,570,Marketing,Digital Marketing,English
+1015,Intro to Machine Learning,True,119,7630,4.6,1180,66,890,Development,Data Science,English
+1016,Color Theory for Creators,False,0,4420,4.3,390,19,230,Design,Graphic Design,French
+1017,Excel Dashboards,True,39,15320,4.7,2940,35,410,Business,Data Analysis,English
+1018,Responsive Web Design,True,99,8020,4.6,990,57,730,Development,Web Development,Spanish
+1019,Content Planning Lab,True,59,6270,4.4,740,33,380,Marketing,Content Marketing,English
+1020,Agile Team Leadership,True,89,4900,4.5,510,49,660,Business,Management,English
+1021,Logo Design Practice,True,49,7180,4.5,850,38,450,Design,Graphic Design,English
+1022,Python for Data Projects,True,129,10980,4.8,1940,81,1120,Development,Data Science,English
+1023,Email Campaign Essentials,False,0,5830,4.1,460,24,290,Marketing,Digital Marketing,Spanish
+1024,Financial Planning Basics,True,69,8770,4.4,960,41,520,Business,Finance,English
+1025,Interface Design Principles,True,109,9650,4.7,1280,62,810,Design,UX Design,English
+1026,APIs with JavaScript,True,99,5310,4.5,620,53,700,Development,Web Development,English
+1027,Campaign Analytics,True,79,6460,4.5,790,45,590,Marketing,Digital Marketing,French
+1028,Small Business Operations,True,59,7380,4.3,810,37,480,Business,Management,English
+1029,UX Research Starter,False,0,3910,4.2,340,21,250,Design,UX Design,English
+1030,Database Design Essentials,True,89,11350,4.6,1560,60,780,Development,Data Science,Spanish
+1031,Storytelling for Brands,True,69,4720,4.4,510,34,420,Marketing,Content Marketing,English
+1032,Intro to Business Metrics,True,49,12480,4.6,2030,32,390,Business,Data Analysis,English
+1033,Illustration with Digital Tools,True,79,6140,4.5,690,47,640,Design,Illustration,Spanish
+1034,Web Accessibility Basics,False,0,7540,4.6,890,28,330,Development,Web Development,English
+1035,Negotiation Skills,True,59,9860,4.4,1390,30,360,Business,Management,French
+1036,Video Content for Social Media,True,89,8290,4.5,1050,55,720,Marketing,Social Media,English
+1037,Typography Fundamentals,True,39,5380,4.3,570,26,310,Design,Graphic Design,English
+1038,Statistics for Data Work,True,99,9020,4.7,1310,58,740,Development,Data Science,French
+1039,Remote Team Collaboration,False,0,6180,4.2,480,23,280,Business,Management,English
+1040,Search-Friendly Content,True,69,10730,4.6,1770,40,520,Marketing,Content Marketing,Spanish
